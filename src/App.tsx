@@ -40,6 +40,7 @@ export default function App() {
           </div>
         </div>
       </div>
+      
 
 
       <section id="home" className="section">
