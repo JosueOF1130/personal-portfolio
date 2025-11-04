@@ -17,6 +17,7 @@ import JSLogo from "./assets/logos/js-svgrepo-com.svg?react";
 import TSLogo from "./assets/logos/typescript-16-svgrepo-com.svg?react";
 import ExpoLogo from "./assets/logos/expo-icon-svgrepo-com.svg?react";
 import FirebaseLogo from "./assets/logos/firebase-svgrepo-com.svg?react"
+import ArrowRightIcon from "./assets/icons/arrow-right.svg?react";
 
 export default function App() {
   return (
@@ -140,7 +141,43 @@ export default function App() {
         </div>
       </section>
 
-      <div id="projects" className="section">Projects Section</div>
+      <div id="projects" className="section">
+
+        <h4>Personal projects</h4>
+        <h2>Projects I'm currently working on:</h2>
+        
+
+        <div className="project-card">
+          <div className="card-img">
+
+          </div>
+          <div className="card-body">
+            <div className="body-header">
+              <h2>Yarnification</h2>
+              <div className="header-tags">
+                  <span className="header-tag typescript">
+                      TypeScript
+                  </span>
+                  <span className="header-tag expo">
+                    Expo
+                  </span>
+              </div>
+            </div>
+            <p className="body-txt">
+              Project created to help crafters easily calculate how many balls of yarn they'll need for any project. Users can save their projects for future reference and share their specifications or finished results with others on the platform.
+            </p>
+            <div className="body-footer">
+              <div className="github-link">
+                  <GithubIcon className="footer-icon"/> 
+                  <span>Github repository</span>
+              </div>
+              <a href="https://yarnification.netlify.app/" className="preview-link">Live preview <ArrowRightIcon className="preview-arrow"/></a>
+            </div>
+          </div>
+        </div>
+          
+
+      </div>
       <div id="designs" className="section">Designs Section</div>
       <div id="about" className="section">About Section</div>
 
