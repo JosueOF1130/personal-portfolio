@@ -174,7 +174,7 @@ export default function App() {
                 <div className="body-footer">
                   <div className="github-link">
                     <GithubIcon className="footer-icon" />
-                    <a href="https://github.com/JosueOF1130/yarnification" target="_blank">Github repository</a>
+                    <a href="https://github.com/JosueOF1130/yarnification-mobile-app" target="_blank">Github repository</a>
                   </div>
                   <a href="https://yarnification.netlify.app/" target="_blank" className="preview-link">Live preview <ArrowRightIcon className="preview-arrow" /></a>
                 </div>
