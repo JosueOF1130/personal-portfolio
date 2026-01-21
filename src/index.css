@@ -18,6 +18,14 @@
   --info-a20: #4077D1;
   --info-a30: #92b2e5;
 
+  --primary-a10: #b79ced;
+  --primary-a20: #bfa7ef;
+  --primary-a30: #c8b1f1;
+  --primary-a40: #d0bcf4;
+  --primary-a50: #d8c7f6;
+  --primary-a60: #e0d2f8;
+
+
 
   font-family: "sono monospace semibold", Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -52,7 +60,7 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: #c8b1f1;
+  color: var(--primary-a30);
 }
 
 .header,
