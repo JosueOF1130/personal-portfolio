@@ -1,29 +1,104 @@
 .project-details {
-    text-align: start;
-    padding: 40px;
+  text-align: start;
+  padding: 40px;
 }
 
 .backlink {
-    color: var(--primary-text);
+  color: var(--primary-text);
 }
 
 .project-details h1 {
-    font-size: 40px;
-    font-weight: 200;
+  font-size: 40px;
+  font-weight: 200;
+  letter-spacing: 20%;
 }
 
 .project-details .answer-block {
-    padding: 40px 28px;
-    color: var(--surface);
-    background-color: var(--primary-text);
-    border-radius: 30px;
-    border: 10px solid var(--background);
-    box-shadow: 0 10px var(--primary-text);
-    font-weight: 600;
-    margin-bottom: 10px;
+  padding: 40px 28px;
+  color: var(--surface);
+  background-color: var(--primary-text);
+  border-radius: 30px;
+  border: 10px solid var(--background);
+  box-shadow: 0 10px var(--primary-text);
+  font-weight: 600;
+  margin-bottom: 10px;
 }
 
-
 .project-details section {
-    margin-top: 20px;
+  margin-top: 20px;
+}
+
+.accordion {
+  border: 1px solid #fff;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  background: var(--primary-text);
+  color: var(--surface);
+
+  border: 10px solid var(--background);
+  border-radius: 20px;
+  box-shadow: 0 10px var(--primary-text);
+}
+
+.accordion-body {
+  width: 100%;
+  background: none;
+  border: none;
+  color: inherit;
+  padding: 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  text-align: start;
+  font-weight: bolder;
+
+}
+
+.accordion-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+
+}
+
+.accordion-body:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.arrow {
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg);
+  transition: transform 0.25s ease; 
+}
+
+/* Arrow flips */
+.accordion.open .arrow {
+  transform: rotate(-135deg);
+}
+
+/* Content animation */
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition:
+    max-height 0.3s ease,
+    opacity 0.2s ease;
+  opacity: 0;
+  /* padding: 1.2rem 0; */
+}
+
+.accordion.open .accordion-content {
+  max-height: 300px; /* big enough for content */
+  opacity: 1;
+  padding: 15px 0;
 }

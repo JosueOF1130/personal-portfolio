@@ -45,7 +45,8 @@ li {
   list-style: none;
   a {
     text-decoration: none;
-    color: var(--pimary-text);
+    color: var(--pimary-
+    );
     font-weight: bold;
   }
 }
@@ -186,4 +187,23 @@ section .bar {
   font-weight: lighter;
   color: var(--primary-text);
   text-decoration: none;
+}
+
+
+
+.nav-link a {
+  transition: all ease-out 120ms;
+}
+
+.nav-link:hover a {
+  transform: scale(1.2);
+}
+
+
+.project-cards .card {
+  transition: all ease-out 130ms;
+}
+
+.project-cards .card:hover {
+  transform: scale(1.05)
 }

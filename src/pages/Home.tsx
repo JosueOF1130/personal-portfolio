@@ -10,6 +10,25 @@ import ArrowRight from "../components/icons/ArrowRight";
 export default function Home() {
     const [isReachOutOpen, setIsReachOutOpen] = useState<boolean>(false);
 
+    const hoverColors: string[] = [
+        "#6BE4DF",
+        "#767EE1",
+        "#F75F66",
+        "#F69DC8"
+    ]
+
+    function getRandomColor(): string {
+        return hoverColors[Math.floor(Math.random() * hoverColors.length)]
+    }
+
+
+    function handleLinkOnMouseEnter(e: React.MouseEvent<HTMLAnchorElement>): void {
+        e.currentTarget.style.color = getRandomColor();
+    }
+
+    function handleLinkOnMouseLeave(e: React.MouseEvent<HTMLAnchorElement>): void {
+        e.currentTarget.style.color = "#E6EAF0";
+    }
 
     return (
         <>
@@ -17,8 +36,22 @@ export default function Home() {
                 <nav className="header-side">
                     <h1>Josue Orozco</h1>
                     <ul className="nav-links">
-                        <li className="nav-link"><a href="#home">Home</a></li>
-                        <li className="nav-link"><a href="#projects">Projects</a></li>
+                        <li className="nav-link">
+                            <a href="#home"
+                                onMouseEnter={(e: React.MouseEvent<HTMLAnchorElement>) => handleLinkOnMouseEnter(e)}
+                                onMouseLeave={(e: React.MouseEvent<HTMLAnchorElement>) => handleLinkOnMouseLeave(e)}
+                                >
+                                Home
+                            </a>
+                        </li>
+                        <li className="nav-link">
+                            <a href="#projects"
+                                onMouseEnter={(e: React.MouseEvent<HTMLAnchorElement>) => handleLinkOnMouseEnter(e)}
+                                onMouseLeave={(e: React.MouseEvent<HTMLAnchorElement>) => handleLinkOnMouseLeave(e)}
+                            >
+                                Projects
+                            </a>
+                        </li>
                     </ul>
                 </nav>
                 <div className="header-side icons">
