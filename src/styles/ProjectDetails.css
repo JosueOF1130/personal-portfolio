@@ -18,14 +18,14 @@
   color: var(--surface);
   background-color: var(--primary-text);
   border-radius: 30px;
-  border: 10px solid var(--background);
+  border: 10px solid var(--border);
   box-shadow: 0 10px var(--primary-text);
   font-weight: 600;
   margin-bottom: 10px;
 }
 
 .project-details section {
-  margin-top: 20px;
+  margin: 25px 0;
 }
 
 .accordion {
@@ -36,7 +36,7 @@
   background: var(--primary-text);
   color: var(--surface);
 
-  border: 10px solid var(--background);
+  border: 10px solid var(--border);
   border-radius: 20px;
   box-shadow: 0 10px var(--primary-text);
 }
@@ -57,7 +57,6 @@
   align-items: start;
   text-align: start;
   font-weight: bolder;
-
 }
 
 .accordion-header {
@@ -65,7 +64,6 @@
   display: flex;
   justify-content: space-between;
   align-items: start;
-
 }
 
 .accordion-body:hover {
@@ -78,7 +76,7 @@
   border-right: 2px solid currentColor;
   border-bottom: 2px solid currentColor;
   transform: rotate(45deg);
-  transition: transform 0.25s ease; 
+  transition: transform 0.25s ease;
 }
 
 /* Arrow flips */
@@ -94,11 +92,46 @@
     max-height 0.3s ease,
     opacity 0.2s ease;
   opacity: 0;
-  /* padding: 1.2rem 0; */
+  padding: 0;
 }
 
 .accordion.open .accordion-content {
-  max-height: 300px; /* big enough for content */
+  /* max-height: max-content;  */
+  /* big enough for content */
   opacity: 1;
   padding: 15px 0;
+}
+
+.accordion.open .accordion-content ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-details .pill {
+  background-color: var(--primary-text);
+
+  display: flex;
+  color: var(--surface);
+  font-weight: bold;
+  align-items: center;
+  width: max-content;
+  padding: 15px 35px;
+  gap: 20px;
+  font-size: 20px;
+  border-radius: 30px;
+  border: 10px solid var(--border);
+  box-shadow: 0 10px var(--primary-text);
+
+  margin-bottom: 10px;
+}
+
+.project-details .pill svg {
+  width: 40px;
+  height: 40px;
+}
+
+.project-details .tech-stack .container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }

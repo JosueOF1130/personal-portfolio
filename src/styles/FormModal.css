@@ -11,9 +11,11 @@
 .modal {
     width: 100%;
     max-width: 600px;
-    background-color: var(--surface-a0);
-    padding: 25px;
+    padding: 100px;
     border-radius: 10px;
+    
+    background-color: var(--primary-text);
+    color: var(--surface);
 }
 
 .modal h2 {
@@ -27,6 +29,17 @@ form {
     flex-direction: column;
     gap: 10px;
     margin-top: 25px;
+
+}
+
+form input, textarea {
+    background-color: var(--surface);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+form input::placeholder, form textarea::placeholder {
+    color: var(--muted-text);
 }
 
 form button {
@@ -35,12 +48,13 @@ form button {
     padding: 10px 0;
 
     background-color: var(--primary-a60);
-    border-color: var(--primary-a10);
     color: var(--tonal-a10);
     border-radius: 4px;
     cursor: pointer;
+    border: 4px solid var(--border);
+    box-shadow: 0 5px var(--primary-text),
+    0 10px var(--border);
     font-weight: bold;
-    border-style: solid;
 }
 
 form button:hover {

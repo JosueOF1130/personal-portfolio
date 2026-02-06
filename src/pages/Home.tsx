@@ -7,6 +7,7 @@ import "../styles/FormModal.css"
 import GithubIcon from "../components/icons/GithubIcon";
 import MailIcon from "../components/icons/MailIcon";
 import ArrowRight from "../components/icons/ArrowRight";
+import FormModal from "../components/FormModal";
 export default function Home() {
     const [isReachOutOpen, setIsReachOutOpen] = useState<boolean>(false);
 
@@ -65,7 +66,7 @@ export default function Home() {
 
                 <div className="hero-section" >
                     <h2>Web Developer</h2>
-                    <button className="reachout-btn">
+                    <button className="reachout-btn" onClick={() => setIsReachOutOpen(true)}>
                         <MailIcon /> <h2>Reach out</h2>
                     </button>
                 </div>
@@ -122,7 +123,7 @@ export default function Home() {
                         </li>
 
                         <li className="card invoice">
-                            <Link to="/projects/Invoice Creator" className="project-link">
+                            <Link to="/projects/Cleaning Services Invoice Creator" className="project-link">
                                 <div className="body">
                                     <div className="header">
                                         <h2>Invoice Creator</h2>
@@ -146,9 +147,7 @@ export default function Home() {
                     </ul>
                 </section>
 
-                <div className="contact-modal">
-
-                </div>
+                <FormModal open={isReachOutOpen} onClose={() => setIsReachOutOpen(false)}></FormModal>
             </main>
 
 

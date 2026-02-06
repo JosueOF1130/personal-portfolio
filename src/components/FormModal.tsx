@@ -3,13 +3,16 @@ import "../styles/FormModal.css"
 
 import emailjs from "@emailjs/browser";
 
+import type { ReactElement } from "react";
+
 type Props = {
     open: boolean;
     onClose: () => void;
 };
 
-export default function FormModal({ open, onClose }: Props) {
+export default function FormModal({ open, onClose }: Props): ReactElement | null {
 
+    if (!open) return null;
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -30,7 +33,6 @@ export default function FormModal({ open, onClose }: Props) {
     };
 
 
-    if (!open) return null;
 
     return (
         <div className="modal-backdrop" onClick={onClose}>

@@ -43,7 +43,7 @@ export default function Yarnification() {
 
 
 
-            <section className="desisions">
+            <section className="decisions">
                 <h1>Design & UX Decisions </h1>
                 <div className="answer-block">
                     <p>

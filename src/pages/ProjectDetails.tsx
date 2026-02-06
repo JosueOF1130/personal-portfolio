@@ -4,6 +4,7 @@ import { useParams, Link } from "react-router-dom";
 import "../styles/ProjectDetails.css"
 import Yarnification from "../components/project details/Yarnification";
 import Flicksy from "../components/project details/Flicksy";
+import InvoiceCreator from "../components/project details/InvoiceCreator";
 
 
 
@@ -19,6 +20,8 @@ export default function ProjectDetails() {
             {slug === "Yarnification" && <Yarnification />}
 
             {slug === "Flicksy" && <Flicksy />}
+
+            {slug === "Cleaning Services Invoice Creator" && <InvoiceCreator/>}
         </main>
     );
 }
