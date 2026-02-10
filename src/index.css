@@ -8,6 +8,7 @@
   --background: #0E0F12;
   --surface: #17181D;
   --border: #24262D;
+  --border-o50: rgba(36, 38, 45, .5);
   
   --primary-text: #E6EAF0;
   --primary-text-o20: rgba(230, 234, 240, 0.2);
@@ -61,6 +62,7 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
   font-family: 'Manrope';
+  color: var(--primary-text);
 }
 
 p.sono {
@@ -68,5 +70,9 @@ p.sono {
 }
 
 p.muted {
-  color: var(--muted-text)
+  color: var(--muted-text);
+}
+
+p.body {
+  color: var(--body-text);
 }

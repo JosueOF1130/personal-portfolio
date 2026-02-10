@@ -38,6 +38,10 @@ export default function FormModal({ open, onClose }: Props): ReactElement | null
         <div className="modal-backdrop" onClick={onClose}>
             <div className="modal" onClick={(e: React.MouseEvent) => e.stopPropagation()}>
                 <h2>Reach out</h2>
+                <p className="body">Have a question, project idea, or just want to say hi? 
+                    <br/>
+                    I'd love to hear from you.    
+                </p>
                 <form onSubmit={handleSubmit}>
                     <input type="text" name="name" placeholder="Name" required />
                     <input type="email" name="email" placeholder="Email" required />

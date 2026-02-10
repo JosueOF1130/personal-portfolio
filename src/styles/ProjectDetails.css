@@ -15,14 +15,18 @@
 
 .project-details .answer-block {
   padding: 40px 28px;
-  color: var(--surface);
-  background-color: var(--primary-text);
+  background-color: var(--surface);
   border-radius: 30px;
   border: 10px solid var(--border);
-  box-shadow: 0 10px var(--primary-text);
+  box-shadow: 0 10px var(--surface);
   font-weight: 600;
   margin-bottom: 10px;
+  p {
+    color: var(--body-text);
+  }
 }
+
+
 
 .project-details section {
   margin: 25px 0;
@@ -33,12 +37,11 @@
   border-radius: 12px;
   margin-bottom: 1rem;
   overflow: hidden;
-  background: var(--primary-text);
-  color: var(--surface);
+  background: var(--surface);
 
   border: 10px solid var(--border);
   border-radius: 20px;
-  box-shadow: 0 10px var(--primary-text);
+  box-shadow: 0 10px var(--surface);
 }
 
 .accordion-body {
@@ -66,8 +69,8 @@
   align-items: start;
 }
 
-.accordion-body:hover {
-  background: rgba(255, 255, 255, 0.05);
+.accordion:hover {
+  border-color: var(--border-o50);
 }
 
 .arrow {
@@ -108,7 +111,7 @@
 }
 
 .project-details .pill {
-  background-color: var(--primary-text);
+  background-color: var(--sur);
 
   display: flex;
   color: var(--surface);
@@ -120,7 +123,7 @@
   font-size: 20px;
   border-radius: 30px;
   border: 10px solid var(--border);
-  box-shadow: 0 10px var(--primary-text);
+  box-shadow: 0 10px var(--surface);
 
   margin-bottom: 10px;
 }
@@ -128,6 +131,10 @@
 .project-details .pill svg {
   width: 40px;
   height: 40px;
+  /* fill: var(--muted-text); */
+  path {
+    fill: var(--body-text);
+  }
 }
 
 .project-details .tech-stack .container {
