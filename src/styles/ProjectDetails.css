@@ -111,7 +111,7 @@
 }
 
 .project-details .pill {
-  background-color: var(--sur);
+  background-color: var(--surface);
 
   display: flex;
   color: var(--surface);

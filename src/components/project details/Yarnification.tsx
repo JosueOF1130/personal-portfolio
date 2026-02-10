@@ -1,4 +1,9 @@
 import Accordion from "../Accordion";
+import ExpoIcon from "../icons/ExpoIcon";
+import FirebaseIcon from "../icons/FirebaseIcon";
+import ReactIcon from "../icons/ReactIcon";
+import TypescriptIcon from "../icons/TypescriptIcon";
+import TechStackPill from "../TechStackPill";
 
 
 export default function Yarnification() {
@@ -41,6 +46,29 @@ export default function Yarnification() {
                 </Accordion>
             </section>
 
+
+            <section className="tech-stack">
+                <h1>Tech Stack</h1>
+
+                <div className="container">
+                    <TechStackPill title="React Native">
+                        <ReactIcon />
+                    </TechStackPill>
+
+                    <TechStackPill title="TypeScript">
+                        <TypescriptIcon />
+                    </TechStackPill>
+
+                    <TechStackPill title="Expo">
+                        <ExpoIcon />
+                    </TechStackPill>
+
+                    <TechStackPill title="Firebase">
+                        <FirebaseIcon />
+                    </TechStackPill>
+
+                </div>
+            </section>
 
 
             <section className="decisions">
