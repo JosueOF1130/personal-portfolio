@@ -45,8 +45,7 @@ li {
   list-style: none;
   a {
     text-decoration: none;
-    color: var(--pimary-
-    );
+    color: var(--pimary-);
     font-weight: bold;
   }
 }
@@ -70,7 +69,6 @@ li {
   stroke: var(--background);
 }
 
-
 .ripple-heading {
   display: inline-block;
   cursor: pointer;
@@ -80,9 +78,7 @@ li {
   display: inline-block;
   /* transition: transform 0.1s ease-in-out; */
   transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
-
 }
-
 
 .hero-section {
   min-height: calc(100vh - 125px);
@@ -108,7 +104,7 @@ li {
 
 .reachout-btn:hover .mail-icon {
   path {
-    stroke: var(--surface)
+    stroke: var(--surface);
   }
 }
 
@@ -135,8 +131,6 @@ li {
 .reachout-btn:active {
   transform: translate(0, 10px);
 }
-
-
 
 section .bar {
   margin: 50px 0;
@@ -173,7 +167,6 @@ section .bar {
   flex-wrap: wrap;
 }
 
-
 .project-cards .card .body {
   height: 86%;
   display: flex;
@@ -198,7 +191,6 @@ section .bar {
   gap: 10px;
 }
 
-
 .project-cards .card .body .header .tags .tag {
   border: 1px solid var(--primary-text);
   border-radius: 50px;
@@ -209,27 +201,24 @@ section .bar {
   box-shadow: 0 2px var(--primary-text);
 }
 
- .project-cards .card .content {
+.project-cards .card .content {
   text-align: left;
   font-weight: 400;
   margin-top: 5px;
 }
 
-
-.project-cards .card .footer span{
+.project-cards .card .footer span {
   display: flex;
   align-items: center;
 }
 
 .project-cards .card .project-link {
   width: 100%;
-  font-family: 'Manrope';
+  font-family: "Manrope";
   font-weight: 100;
   color: var(--primary-text);
   text-decoration: none;
 }
-
-
 
 .nav-link a {
   transition: all ease-out 120ms;
@@ -239,59 +228,82 @@ section .bar {
   transform: scale(1.2);
 }
 
-
 .project-cards .card {
   transition: all ease-out 130ms;
 }
 
 .project-cards .card:hover {
   transform: scale(1.05);
-  .body, .tag, .content p {
+  .body,
+  .tag,
+  .content p {
     color: var(--surface);
   }
-    .header .tags .tag {
+  .header .tags .tag {
     box-shadow: 0 2px var(--surface);
-    border-color: var(--surface)
+    border-color: var(--surface);
   }
   svg path {
     fill: var(--surface);
   }
 }
 
-
-
-
-.traveling-title {
-  display: inline-block;
-}
-
 .traveling-title span {
   display: inline-block;
-  color: white;
-  animation-name: jump;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
+  transition: color 0.2s ease;
+}
+/* 
+.jump {
+  animation: jump 0.35s ease;
+}
+
+@keyframes jump {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+} */
+
+.jump {
+  animation: jump 0.35s ease;
+  filter: drop-shadow(0 0 6px currentColor);
 }
 
 @keyframes jump {
   0% {
-    transform: translateY(0px);
-    color: white;
+    transform: translateY(0) scale(1);
   }
-
-  5% {
-    transform: translateY(-6px);
-    color: var(--accent-color);
+  40% {
+    transform: translateY(-8px) scale(1.05);
   }
-
-  10% {
-    transform: translateY(0px);
-    color: white;
-  }
-
   100% {
-    transform: translateY(0px);
-    color: white;
+    transform: translateY(0) scale(1);
   }
 }
 
+/* SCROLLBAR */
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-text);
+  border-radius: 8px;
+  border: 2px solid var(--background);
+}
+
+/* On hover */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    180deg,
+    #6BE4DF,
+    #767EE1,
+    #F75F66,
+    #F69DC8
+  );
+}
