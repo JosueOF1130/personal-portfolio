@@ -9,6 +9,7 @@ import MailIcon from "../components/icons/MailIcon";
 import ArrowRight from "../components/icons/ArrowRight";
 import FormModal from "../components/FormModal";
 import RippleHeading from "../components/RippleHeading";
+import AnimatedHeroTitle from "../components/AnimatedHeroTitle";
 export default function Home(): ReactElement {
     const [isReachOutOpen, setIsReachOutOpen] = useState<boolean>(false);
 
@@ -112,7 +113,7 @@ export default function Home(): ReactElement {
             <main id="home">
 
                 <div className="hero-section" >
-                    <h2>Web Developer</h2>
+                    <AnimatedHeroTitle></AnimatedHeroTitle>
                     <button className="reachout-btn"
                         onClick={() => setIsReachOutOpen(true)}
                         onMouseEnter={(e: React.MouseEvent<HTMLButtonElement>) => handleReachoutButttonOnMouseEnter(e)}

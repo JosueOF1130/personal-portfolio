@@ -259,3 +259,39 @@ section .bar {
 }
 
 
+
+
+.traveling-title {
+  display: inline-block;
+}
+
+.traveling-title span {
+  display: inline-block;
+  color: white;
+  animation-name: jump;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(0px);
+    color: white;
+  }
+
+  5% {
+    transform: translateY(-6px);
+    color: var(--accent-color);
+  }
+
+  10% {
+    transform: translateY(0px);
+    color: white;
+  }
+
+  100% {
+    transform: translateY(0px);
+    color: white;
+  }
+}
+
