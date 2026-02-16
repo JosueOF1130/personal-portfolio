@@ -4,6 +4,7 @@ import "../styles/FormModal.css"
 import emailjs from "@emailjs/browser";
 
 import type { ReactElement } from "react";
+import { useState } from "react";
 
 type Props = {
     open: boolean;
@@ -12,28 +13,34 @@ type Props = {
 
 export default function FormModal({ open, onClose }: Props): ReactElement | null {
 
+    const [isLoading, setIsLoading] = useState<boolean>(false);
+    
     if (!open) return null;
 
+    
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
+        setIsLoading(true);
+        
         try {
             await emailjs.sendForm(
                 "service_p7cs0qj","template_jzbgwc7",
                 e.currentTarget,
                 "fQJeJI7H3qjwxvdFY"
             );
-
+            setIsLoading(false)
             onClose();
+
             alert("Message sent successfully!");
         } catch (error) {
             console.error("EmailJS error:", error);
             alert("Something went wrong. Please try again.");
         }
     };
-
-
-
+    
+    
+    
     return (
         <div className="modal-backdrop" onClick={onClose}>
             <div className="modal" onClick={(e: React.MouseEvent) => e.stopPropagation()}>
@@ -46,11 +53,11 @@ export default function FormModal({ open, onClose }: Props): ReactElement | null
                     <input type="text" name="name" placeholder="Name" required />
                     <input type="email" name="email" placeholder="Email" required />
                     <textarea name="message" placeholder="Message" required rows={5} />
-                    <button type="submit">Send</button>
+                    <button type="submit" disabled={isLoading}>Send</button>
                 </form>
 
             </div>
         </div>
     );
-
+    
 }
