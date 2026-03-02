@@ -76,3 +76,9 @@ p.muted {
 p.body {
   color: var(--body-text);
 }
+
+
+::selection {
+  background-color: var(--primary-text);
+  color: var(--surface);
+}

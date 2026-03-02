@@ -10,6 +10,9 @@ import ArrowRight from "../components/icons/ArrowRight";
 import FormModal from "../components/FormModal";
 import RippleHeading from "../components/RippleHeading";
 import AnimatedHeroTitle from "../components/AnimatedHeroTitle";
+
+import me from "../assets/images/MyPic.jpg";
+
 export default function Home(): ReactElement {
     const [isReachOutOpen, setIsReachOutOpen] = useState<boolean>(false);
 
@@ -81,6 +84,14 @@ export default function Home(): ReactElement {
                                 onMouseLeave={(e: React.MouseEvent<HTMLAnchorElement>) => handleLinkOnMouseLeave(e)}
                             >
                                 Projects
+                            </a>
+                        </li>
+                        <li className="nav-link">
+                            <a href="#about-me"
+                                onMouseEnter={(e: React.MouseEvent<HTMLAnchorElement>) => handleLinkOnMouseEnter(e)}
+                                onMouseLeave={(e: React.MouseEvent<HTMLAnchorElement>) => handleLinkOnMouseLeave(e)}
+                            >
+                                About Me
                             </a>
                         </li>
                     </ul>
@@ -215,7 +226,7 @@ export default function Home(): ReactElement {
                     <div className="info">
                         <RippleHeading ></RippleHeading>
                         <div className="content">
-                            <img src="src\assets\images\MyPic.JPG" alt="Me" />
+                            <img src={me} alt="Me" />
                             <p>
                                 I'm a frontend developer focused on building thoughtful, user-centered web and mobile experiences. I combine technical structure with design thinking to create applications that are both functional and intuitive.
                                 <br />
