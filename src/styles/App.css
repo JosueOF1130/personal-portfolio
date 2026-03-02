@@ -132,6 +132,11 @@ li {
   transform: translate(0, 10px);
 }
 
+
+section {
+  padding-bottom: 100px;
+}
+
 section .bar {
   margin: 50px 0;
   height: 5px;
@@ -306,4 +311,44 @@ section .bar {
     #F75F66,
     #F69DC8
   );
+}
+
+.about-me .info {
+  padding: 75px 100px;
+  width: max-content;
+  margin: auto;
+  border-radius: 20px;
+  border: 5px solid var(--border);
+}
+
+.about-me .info h1 {
+  font-size: 64px;
+  letter-spacing: 30%;
+  margin-bottom: 25px; 
+  
+}
+
+
+
+.about-me .info .content img {
+  width: 615px;
+  border-radius: 40px;
+  border: 7px solid var(--primary-text);
+  box-shadow: 0 5px var(--background), 0 10px var(--primary-text);
+}
+
+.about-me .info .content {
+  display: flex;
+  align-items: center;
+  text-align: start;
+  gap: 50px;
+  justify-content: center;
+  p {
+    max-width: 573px;
+  }
+}
+
+
+.about-me .info {
+  background-color: var(--surface);
 }

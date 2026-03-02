@@ -208,6 +208,31 @@ export default function Home(): ReactElement {
                     </ul>
                 </section>
 
+                <section className="about-me" id="about-me">
+                    <h2>About Me</h2>
+                    <div className="bar"></div>
+
+                    <div className="info">
+                        <RippleHeading ></RippleHeading>
+                        <div className="content">
+                            <img src="src\assets\images\MyPic.JPG" alt="Me" />
+                            <p>
+                                I'm a frontend developer focused on building thoughtful, user-centered web and mobile experiences. I combine technical structure with design thinking to create applications that are both functional and intuitive.
+                                <br />
+                                <br />
+                                During my UX/UI internship at Bosmos, I developed a deeper understanding of user research, visual hierarchy, and interaction design. That experience shaped the way I approach development today. I do not just write code. I design experiences that feel natural and intentional.
+                                <br />
+                                <br />
+                                I primarily work with React, React Native, TypeScript, and Firebase, building scalable applications with clean architecture and reusable component systems. I enjoy refining the details, from state management to micro-interactions, because I believe great products are built in the small decisions.
+                                <br />
+                                <br />
+                                I am currently focused on strengthening my frontend architecture skills and continuing to build production-ready applications with strong UX foundations.
+                            </p>
+                        </div>
+                    </div>
+
+                </section>
+
                 <FormModal open={isReachOutOpen} onClose={() => setIsReachOutOpen(false)}></FormModal>
             </main>
 
