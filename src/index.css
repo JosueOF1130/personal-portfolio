@@ -5,15 +5,92 @@
 
 :root {
 
+  /* BASE UNIT: 4px */
+
+  --space-1: 4px;
+  /* tight — icon gaps, tiny nudges */
+  --space-2: 8px;
+  /* small — badge padding, close siblings */
+  --space-3: 12px;
+  /* compact — button padding Y, small gaps */
+  --space-4: 16px;
+  /* default — standard inner padding */
+  --space-5: 20px;
+  /* medium — card padding, form fields */
+  --space-6: 24px;
+  /* comfortable — section inner padding */
+  --space-8: 32px;
+  /* large — between components */
+  --space-10: 40px;
+  /* xl — section padding, page edges */
+  --space-12: 48px;
+  /* 2xl — hero spacing, major gaps */
+  --space-16: 64px;
+  /* 3xl — between major sections */
+  --space-20: 80px;
+  /* 4xl — page bottom padding */
+  --space-24: 96px;
+  /* 5xl — hero min-height offsets */
+
+
+  --wrapper-width: 1200px;
+
+  --text-xs: 11px;
+  /* tags, badges, tiny labels */
+  --text-sm: 13px;
+  /* captions, muted text, meta info */
+  --text-base: 15px;
+  /* body text, descriptions */
+  --text-md: 18px;
+  /* card titles, small headings */
+  --text-lg: 22px;
+  /* section labels */
+  --text-xl: 28px;
+  /* page subheadings */
+  --text-2xl: 36px;
+  /* page titles */
+  --text-3xl: 48px;
+  /* hero headings */
+
   --background: #0E0F12;
   --surface: #17181D;
   --border: #24262D;
   --border-o50: rgba(36, 38, 45, .5);
-  
+
+
+  --cyan: #6BE4DF;
+  --purple: #767EE1;
+  --red: #E7677B;
+  --pink: #EFA6C8;
+  --cyan-o20: #6BE4DF33;
+  --purple-o20: #767EE133;
+  --red-o20: #E7677B33;
+  --pink-o20: #EFA6C833;
+
   --primary-text: #E6EAF0;
   --primary-text-o20: rgba(230, 234, 240, 0.2);
   --body-text: #9AA3AD;
   --muted-text: #6B7280;
+
+  /* INFO — matches your cyan */
+  --info: #6BE4DF;
+  --info-bg: rgba(107, 228, 223, 0.08);
+  --info-border: rgba(107, 228, 223, 0.2);
+
+  /* SUCCESS — terminal green */
+  --success: #28CA41;
+  --success-bg: rgba(40, 202, 65, 0.08);
+  --success-border: rgba(40, 202, 65, 0.2);
+
+  /* WARNING — amber, fits the dark theme */
+  --warning: #FFBD2E;
+  --warning-bg: rgba(255, 189, 46, 0.08);
+  --warning-border: rgba(255, 189, 46, 0.2);
+
+  /* DANGER — matches your red */
+  --danger: #E7677B;
+  --danger-bg: rgba(231, 103, 122, 0.08);
+  --danger-border: rgba(231, 103, 123, 0.2);
 
 
   color: var(--primary-text);
@@ -47,14 +124,21 @@ html,
 body,
 #root {
   height: 100%;
-  
+
 }
+
 * {
   margin: 0;
   padding: 0;
+  --webkit-text-box-trim: trim-both;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Space Grotesk';
   font-weight: 800;
   letter-spacing: -1%;
@@ -77,6 +161,17 @@ p.body {
   color: var(--body-text);
 }
 
+.pill p {
+  color: var(--primary-text);
+}
+
+#svg-fill {
+  fill: var(--muted-text);
+}
+
+section {
+  padding-bottom: 50px;
+}
 
 ::selection {
   background-color: var(--primary-text);

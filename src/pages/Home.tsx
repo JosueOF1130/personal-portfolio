@@ -12,6 +12,7 @@ import RippleHeading from "../components/RippleHeading";
 import AnimatedHeroTitle from "../components/AnimatedHeroTitle";
 
 import me from "../assets/images/MyPic.jpg";
+import { projects } from "../data/projects";
 
 export default function Home(): ReactElement {
     const [isReachOutOpen, setIsReachOutOpen] = useState<boolean>(false);
@@ -141,7 +142,41 @@ export default function Home(): ReactElement {
 
                     <ul className="project-cards">
 
-                        <li className="card yarnification"
+                        {
+                            projects.map((project) => (
+                                <li key={project.slug} className="card"
+                                    onMouseEnter={(e: React.MouseEvent<HTMLLIElement>) => handleProjectCardOnMouseEnter(e)}
+                                    onMouseLeave={(e: React.MouseEvent<HTMLLIElement>) => handleProjectCardOnMouseLeave(e)}
+                                >
+                                    <Link to={`/projects/${project.slug}`} className="project-link">
+                                        <div className="body">
+                                            <div className="header">
+                                                <h2>{project.title}</h2>
+                                                <div className="tags">
+                                                    {project.tags.map((tag) => (
+                                                        <span key={tag.label} className="tag" style={{ "--tag-color": `var(${tag.colorVar})` } as React.CSSProperties}>
+                                                            {tag.label}
+                                                        </span>
+                                                    ))}
+                                                </div>
+                                            </div>
+
+                                            <div className="content">
+                                                <p>{project.description}</p>
+                                                </div>
+
+                                            <div className="footer">
+                                                <span>
+                                                    View project <ArrowRight />
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </Link>
+                                </li>
+                            ))
+                        }
+
+                        {/* <li className="card yarnification"
                             onMouseEnter={(e: React.MouseEvent<HTMLLIElement>) => handleProjectCardOnMouseEnter(e)}
                             onMouseLeave={(e: React.MouseEvent<HTMLLIElement>) => handleProjectCardOnMouseLeave(e)}
                         >
@@ -214,7 +249,7 @@ export default function Home(): ReactElement {
                                     </div>
                                 </div>
                             </Link>
-                        </li>
+                        </li> */}
 
                     </ul>
                 </section>
