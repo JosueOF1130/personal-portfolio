@@ -17,7 +17,7 @@ export default function Accordion({ title, children }: Props) {
             >
 
                 <div className="accordion-header">
-                    <span>{title}</span>
+                    <h3>{title}</h3>
                     <span className="arrow" />
                 </div>
 
@@ -25,7 +25,7 @@ export default function Accordion({ title, children }: Props) {
                     ref={contentRef}
                     style={{
                         maxHeight: isOpen ? `${contentRef.current?.scrollHeight}px` : "0px",
-                        opacity: isOpen ? 1 : 0,
+                        
                     }}
                 >
                     {children}

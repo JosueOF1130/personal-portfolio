@@ -56,3 +56,4 @@ export default function AnimatedHeroTitle(): ReactElement {
     </h2>
   );
 }
+  

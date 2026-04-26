@@ -9,7 +9,7 @@ export default function TechStackPill({ title, children }: Props): ReactElement 
     return (
         <div className="pill">  
             { children }
-            <p className="sono body">{ title }</p>
+            <p className="sono">{ title }</p>
         </div>
     );
 }
