@@ -252,16 +252,6 @@ section .bar {
   display: inline-block;
   transition: color 0.2s ease;
 }
-/* 
-.jump {
-  animation: jump 0.35s ease;
-}
-
-@keyframes jump {
-  0%   { transform: translateY(0); }
-  50%  { transform: translateY(-8px); }
-  100% { transform: translateY(0); }
-} */
 
 .jump {
   animation: jump 0.35s ease;

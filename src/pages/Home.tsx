@@ -10,6 +10,11 @@ import ArrowRight from "../components/icons/ArrowRight";
 import FormModal from "../components/FormModal";
 import RippleHeading from "../components/RippleHeading";
 import AnimatedHeroTitle from "../components/AnimatedHeroTitle";
+
+import { projects } from "../data/projects";
+import ProjectCard from "../components/ProjectCard";
+
+
 export default function Home(): ReactElement {
     const [isReachOutOpen, setIsReachOutOpen] = useState<boolean>(false);
 
@@ -64,7 +69,6 @@ export default function Home(): ReactElement {
         <>
             <header className="header">
                 <nav className="header-side">
-                    {/* <h1>Josue Orozco</h1> */}
                     <RippleHeading></RippleHeading>
                     <ul className="nav-links">
                         <li className="nav-link">
@@ -129,82 +133,14 @@ export default function Home(): ReactElement {
                     <div className="bar"></div>
 
                     <ul className="project-cards">
-
-                        <li className="card yarnification"
-                            onMouseEnter={(e: React.MouseEvent<HTMLLIElement>) => handleProjectCardOnMouseEnter(e)}
-                            onMouseLeave={(e: React.MouseEvent<HTMLLIElement>) => handleProjectCardOnMouseLeave(e)}
-                        >
-                            <Link to="/projects/Yarnification" className="project-link">
-                                <div className="body">
-                                    <div className="header">
-                                        <h2>Yarnification</h2>
-                                        <div className="tags">
-                                            <p className="tag typescript sono">TypeScript</p>
-                                            <p className="tag expo sono">React Native</p>
-                                        </div>
-                                    </div>
-                                    <div className="content">
-                                        <p>Plan yarn projects and calculate materials effortlessly.</p>
-                                    </div>
-                                    <div className="footer">
-                                        <span>
-                                            View project <ArrowRight />
-                                        </span>
-                                    </div>
-                                </div>
-                            </Link>
-                        </li>
-
-                        <li className="card flicksy"
-                            onMouseEnter={(e: React.MouseEvent<HTMLLIElement>) => handleProjectCardOnMouseEnter(e)}
-                            onMouseLeave={(e: React.MouseEvent<HTMLLIElement>) => handleProjectCardOnMouseLeave(e)}
-                        >
-                            <Link to="/projects/Flicksy" className="project-link">
-                                <div className="body">
-                                    <div className="header">
-                                        <h2>Flicksy</h2>
-                                        <div className="tags">
-                                            <p className="tag typescript sono">TypeScript</p>
-                                            <p className="tag expo sono">React Native</p>
-                                        </div>
-                                    </div>
-                                    <div className="content">
-                                        <p>Discover curated films, manage your watchlist, and see where to watch.</p>
-                                    </div>
-                                    <div className="footer">
-                                        <span>
-                                            View project <ArrowRight />
-                                        </span>
-                                    </div>
-                                </div>
-                            </Link>
-                        </li>
-
-                        <li className="card invoice"
-                            onMouseEnter={(e: React.MouseEvent<HTMLLIElement>) => handleProjectCardOnMouseEnter(e)}
-                            onMouseLeave={(e: React.MouseEvent<HTMLLIElement>) => handleProjectCardOnMouseLeave(e)}
-                        >
-                            <Link to="/projects/Cleaning Services Invoice Creator" className="project-link">
-                                <div className="body">
-                                    <div className="header">
-                                        <h2>Invoice Creator</h2>
-                                        <div className="tags">
-                                            <p className="tag typescript sono">TypeScript</p>
-                                            <p className="tag expo sono">React</p>
-                                        </div>
-                                    </div>
-                                    <div className="content">
-                                        <p>Simplifying invoicing for a cleaning service</p>
-                                    </div>
-                                    <div className="footer">
-                                        <span>
-                                            View project <ArrowRight />
-                                        </span>
-                                    </div>
-                                </div>
-                            </Link>
-                        </li>
-
+                        {projects.map((project) => (
+                            <ProjectCard
+                                key={project.id}
+                                project={project}
+                                onMouseEnter={handleProjectCardOnMouseEnter}
+                                onMouseLeave={handleProjectCardOnMouseLeave}
+                            />
+                        ))}
                     </ul>
                 </section>
 
