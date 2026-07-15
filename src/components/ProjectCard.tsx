@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import ArrowRight from "../components/icons/ArrowRight";
 import type { Project } from "../data/projects";
 
 interface ProjectCardProps {
@@ -36,7 +35,7 @@ export default function ProjectCard({
           </div>
           <div className="footer">
             <span>
-              View project <ArrowRight />
+              View project <strong>{'>'}</strong>
             </span>
           </div>
         </div>

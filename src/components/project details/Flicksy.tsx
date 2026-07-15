@@ -17,8 +17,8 @@ export default function Flicksy() {
                 <div className="answer-block">
                     <p>
                         Choosing a movie has become increasingly frustrating. Movie lovers often have to jump between multiple streaming apps, each with different libraries and recommendations. This process is even more annoying on slower TVs, where opening and closing apps takes time and breaks the experience.
-                        <br/>
-                        <br/>
+                        <br />
+                        <br />
                         Streaming platforms also cater to specific audiences, which means no single service offers everything. Even after finding a movie that looks interesting, users often discover it isn't available on any of their subscriptions—or worse, they spend all that time browsing and still don't find anything to watch at all.
                     </p>
                 </div>
@@ -104,16 +104,16 @@ export default function Flicksy() {
 
 
             <section className="decisions">
-                <h1>Design & UX Decisions </h1>
+                <h1>Design & UX Decisions</h1>
                 <div className="answer-block">
                     <p>
-                        Yarnification was designed to be approachable for crafters of all experience levels. The interface prioritizes clarity and ease of use, allowing users to navigate the app intuitively without needing prior technical knowledge.
+                        Flicksy was built around the idea that less on screen means faster decisions. Each movie card surfaces only what matters — the poster, title, rating, and availability — so users can browse quickly without having to dig for information. Nothing is shown unless it's relevant to the current context.
                         <br />
                         <br />
-                        The visual direction was inspired by the calming and relaxing nature of crocheting. Rather than using harsh whites or high-contrast themes, the app uses soft tones for both light and dark modes to create a cozy, comfortable experience that feels welcoming during longer planning sessions.
+                        The AI recommendation feature was designed to be as frictionless as possible. Rather than asking users to fill out a form or configure settings, recommendations are generated with a single interaction — pick your favorites, pick a genre, and get results instantly. The goal was to make discovering something new feel effortless.
                         <br />
                         <br />
-                        A minimal design approach was chosen to reduce visual clutter and cognitive load. By focusing only on essential information and actions, Yarnification helps users quickly find what they need—whether they are planning at home or making decisions in-store.
+                        Navigation adapts to how the user is viewing the app — a top nav bar on desktop and a bottom tab bar on mobile browsers — keeping the experience familiar and easy to pick up regardless of the device. The overall UX was designed to be approachable for anyone, with no learning curve required to get value out of the app.
                     </p>
                 </div>
             </section>

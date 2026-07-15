@@ -3,10 +3,10 @@ export interface Project {
   name: string;
   slug: string;
   cardClass: string;
-  tags: { 
-    label: string; 
-    className: string 
-    }[];
+  tags: {
+    label: string;
+    className: string
+  }[];
   description: string;
 }
 
@@ -43,5 +43,16 @@ export const projects: Project[] = [
       { label: "React", className: "expo sono" },
     ],
     description: "Landing site for a Bay Area general contractor",
+  },
+  {
+    id: "baycovertech",
+    name: "Bay Cover Tech",
+    slug: "BayCoverTech",
+    cardClass: "baycovertech",
+    tags: [
+      { label: "TypeScript", className: "typescript sono" },
+      { label: "React", className: "expo sono" },
+    ],
+    description: "Modern redesign for a Bay Area pool cover specialist",
   },
 ];

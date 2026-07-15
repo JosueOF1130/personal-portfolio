@@ -1,10 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Sono:wght,MONO@200..800,1&family=Space+Grotesk:wght@300..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Sono:wght,MONO@200..800,1&family=Space+Grotesk:wght@300..700&display=swap");
 
-
-
+/* index.css */
 
 :root {
-
   /* BASE UNIT: 4px */
 
   --space-1: 4px;
@@ -32,7 +30,6 @@
   --space-24: 96px;
   /* 5xl — hero min-height offsets */
 
-
   --wrapper-width: 1200px;
 
   --text-xs: 11px;
@@ -52,58 +49,58 @@
   --text-3xl: 48px;
   /* hero headings */
 
-  --background: #0E0F12;
-  --surface: #17181D;
-  --border: #24262D;
-  --border-o50: rgba(36, 38, 45, .5);
+  --background: #0e0f12;
+  --surface: #17181d;
+  --border: #24262d;
+  --border-o50: rgba(36, 38, 45, 0.5);
+  --surface-elevated: #1f2028;
 
+  /* buttons */
+  --btn-primary-bg: var(--cyan);
+  --btn-primary-text: #0a2e2d; /* dark teal — readable on cyan */
+  --btn-ghost-border: var(--cyan);
+  --btn-ghost-text: var(--cyan);
+  --btn-subtle-bg: var(--cyan-o20);
+  --btn-subtle-border: rgba(107, 228, 223, 0.25);
 
-  --cyan: #6BE4DF;
-  --purple: #767EE1;
-  --red: #E7677B;
-  --pink: #EFA6C8;
-  --cyan-o20: #6BE4DF33;
-  --purple-o20: #767EE133;
-  --red-o20: #E7677B33;
-  --pink-o20: #EFA6C833;
+  --cyan: #6be4df;
+  --purple: #767ee1;
+  --red: #e7677b;
+  --pink: #efa6c8;
+  --cyan-o20: #6be4df33;
+  --purple-o20: #767ee133;
+  --red-o20: #e7677b33;
+  --pink-o20: #efa6c833;
 
-  --primary-text: #E6EAF0;
+  --primary-text: #e6eaf0;
   --primary-text-o20: rgba(230, 234, 240, 0.2);
-  --body-text: #9AA3AD;
-  --muted-text: #6B7280;
+  --body-text: #9aa3ad;
+  --muted-text: #6b7280;
 
   /* INFO — matches your cyan */
-  --info: #6BE4DF;
+  --info: #6be4df;
   --info-bg: rgba(107, 228, 223, 0.08);
   --info-border: rgba(107, 228, 223, 0.2);
 
   /* SUCCESS — terminal green */
-  --success: #28CA41;
+  --success: #28ca41;
   --success-bg: rgba(40, 202, 65, 0.08);
   --success-border: rgba(40, 202, 65, 0.2);
 
   /* WARNING — amber, fits the dark theme */
-  --warning: #FFBD2E;
+  --warning: #ffbd2e;
   --warning-bg: rgba(255, 189, 46, 0.08);
   --warning-border: rgba(255, 189, 46, 0.2);
 
   /* DANGER — matches your red */
-  --danger: #E7677B;
+  --danger: #e7677b;
   --danger-bg: rgba(231, 103, 122, 0.08);
   --danger-border: rgba(231, 103, 123, 0.2);
-
 
   color: var(--primary-text);
   background-color: var(--background);
 
-
-
-
-
-
-
-
-  font-family: 'Manrope', sans-serif;
+  font-family: "Manrope", sans-serif;
   line-height: 1.5;
   font-weight: 400;
   font-style: normal;
@@ -111,20 +108,16 @@
 
   color-scheme: light dark;
 
-
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-
 html,
 body,
 #root {
   height: 100%;
-
 }
 
 * {
@@ -139,13 +132,13 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Space Grotesk';
+  font-family: "Space Grotesk";
   font-weight: 800;
   letter-spacing: -1%;
 }
 
 p {
-  font-family: 'Manrope';
+  font-family: "Manrope";
   color: var(--primary-text);
 }
 
